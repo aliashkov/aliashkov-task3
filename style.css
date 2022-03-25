@@ -10,7 +10,7 @@ body {
     font-family: 'Open Sans';
     font-style: normal;
     font-size: 24px;
-    line-height: 60px;
+    line-height: 50px;
     font-weight: normal;
 }
 
@@ -18,7 +18,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
+}
 
+.wrapperCocktail{
+    max-height: 1200px;
+  
+}
+
+div.wrapperCocktail {
+    font-size: 20px;
+    margin: 0 10px 0 20px;
 }
 
 button{
