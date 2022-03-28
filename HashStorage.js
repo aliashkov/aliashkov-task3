@@ -57,7 +57,10 @@ get.addEventListener('click', () => {
     let name = prompt('Введите название напитка');
     let result = coctailsStorage.getValue(name);
     if (result != undefined) {
-        document.querySelector('#title').innerHTML = `Коктейль ${coctailsStorage.getValue(name).name} (алкогольный: ${coctailsStorage.getValue(name).isAlcohol} )`;
+        if (coctailsStorage.getValue(name).isAlcohol)
+           document.querySelector('#title').innerHTML = `Коктейль ${coctailsStorage.getValue(name).name} (алкогольный: да)`;
+        else
+           document.querySelector('#title').innerHTML = `Коктейль ${coctailsStorage.getValue(name).name} (алкогольный: нет)`;
         document.querySelector('#ingredients').innerHTML = `Необходимые ингредиенты : ${coctailsStorage.getValue(name).ingredients}`;
         document.querySelector('#recipe').innerHTML = `Рецепт : ${coctailsStorage.getValue(name).recipt}`;
     }
@@ -92,5 +95,3 @@ getAll.addEventListener('click', () => {
         document.querySelector('#title').innerHTML = `В данный момент не содержится ни одного рецепта`;
     }
 });
-
-
